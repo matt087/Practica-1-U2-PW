@@ -1,4 +1,5 @@
 var total=0;
+var suma=0;
 
 const test = document.getElementById('cost');
 
@@ -10,6 +11,7 @@ var texto = [];
 for(let i=0; i<productos.length; i++)
 {
     texto[i] = productos[i]+' $ '+precios[i]*cantidades[i];
+    suma+=precios[i]*cantidades[i];
 }
 
 productos.forEach((producto, index) => {
@@ -19,5 +21,16 @@ productos.forEach((producto, index) => {
     nuevo.id = 'elemento'+(index+1);
     nuevo.className = 'nuevo';
     test.appendChild(nuevo);
-    console.log('funciona');
 });
+
+const resultado = document.getElementById('total');
+const precio_t = document.createElement('p');
+precio_t.textContent = 'Total= $'+suma;
+precio_t.className='total';
+precio_t.id = 'precio_total';
+resultado.appendChild(precio_t);
+console.log('funciona');
+
+
+
+
