@@ -29,7 +29,6 @@ precio_t.textContent = 'Total= $'+suma;
 precio_t.className='total';
 precio_t.id = 'precio_total';
 resultado.appendChild(precio_t);
-console.log('funciona');
 
 
 
